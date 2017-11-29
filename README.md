@@ -19,20 +19,20 @@ DotNetCore.2.0.3-WindowsHosting per IIS e Kestrel.exe
 and this patch for Windows 7, Server 2008 etc etc: Windows6.1-KB2533623-x64.msu
 
 
-1)
+1.
 In order to test on your pc change File hosts in "C:\Windows\System32\drivers\etc"
 192.168.X.X www.netcoreangularjs.com
 
 Change in "Index.html" according to your publish folder
 <base href="/angularcore/">
 
-2)
+2.
 Change in appsettings.json according to your web site address 8needed for page refresh):
   "WebSiteAddress": {
     "DEFAULT": "www.netcoreangularjs.com"
   }
   
-3)
+3.
 Change in "ViewsRedirectRule.cs" according to your publish folder:
 
 if (matchPaths.Contains(request.Path.Value))
@@ -45,7 +45,7 @@ if (matchPaths.Contains(request.Path.Value))
 	response.Headers[HeaderNames.Location] = newLocation;
 }
 
-4)
+4)ì.
 Change in "startup.cs" for url rewriting (add route, change name etc etc):
 
 var options = new RewriteOptions()
@@ -53,7 +53,7 @@ var options = new RewriteOptions()
 		matchPaths: new[] { "/login", "/home", "/prodotti" },
 		newPath: "/"));
 		
-5)
+5.
 Change in "app.js" according to your publish folder:
 
 var configFunction = function ($routeProvider, $httpProvider, $locationProvider) {
