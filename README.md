@@ -33,6 +33,7 @@ Change in **appsettings.json** according to your web site address 8needed for pa
   
 3.
 Change in **"ViewsRedirectRule.cs"** according to your publish folder:
+**SiteAddress is what you wrote in appjson.config**
 
 if (matchPaths.Contains(request.Path.Value))
 {
@@ -66,17 +67,17 @@ var configFunction = function ($routeProvider, $httpProvider, $locationProvider)
         })
         .when('/login',
             {
-                templateUrl: '/**angularcore**/views/login.html',
+                **templateUrl: '/angularcore/views/login.html',**
                 controller: 'LoginViewCtrl'
             })
         .when('/home',
         {
-            templateUrl: '/**angularcore**/views/home.html',
+            **templateUrl: '/angularcore/views/home.html',**
             controller: 'HomeViewCtrl'
         })
         .when('/products',
         {
-            templateUrl: '/**angularcore**/views/products.html',
+            templateUrl: '/angularcore/views/products.html',
             controller: 'ProductsCtrl'
         })
         .otherwise({
