@@ -21,7 +21,7 @@ IIS needs:
 
 1.
 In order to test on your pc change File hosts in "C:\Windows\System32\drivers\etc"
-192.168.X.X www.netcoreangularjs.com
+<br>192.168.X.X www.netcoreangularjs.com
 
 Change in "base href " in "Index.html" according to your publish folder
 
