@@ -55,9 +55,10 @@ var options = new RewriteOptions()
 		
 5.
 Change in **"app.js"** according to your publish folder:
+Change in **templateUrl** according to your publish folder:
 
-var configFunction = function ($routeProvider, $httpProvider, $locationProvider) {
-
+var configFunction = function ($routeProvider, $httpProvider, $locationProvider)
+{
     $routeProvider.caseInsensitiveMatch = true;
 
     $routeProvider
@@ -67,12 +68,12 @@ var configFunction = function ($routeProvider, $httpProvider, $locationProvider)
         })
         .when('/login',
             {
-                **templateUrl: '/angularcore/views/login.html',**
+                templateUrl: '/angularcore/views/login.html',
                 controller: 'LoginViewCtrl'
             })
         .when('/home',
         {
-            **templateUrl: '/angularcore/views/home.html',**
+            templateUrl: '/angularcore/views/home.html',
             controller: 'HomeViewCtrl'
         })
         .when('/products',
