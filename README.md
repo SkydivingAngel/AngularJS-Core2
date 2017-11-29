@@ -6,17 +6,17 @@ Take a look at:
 <br> ViewsRedirectRule.cs
 <br> startup.cs
 <br> app.js
-and change accordingly to the publish folder.
+<br> and change accordingly to the publish folder.
 
 This project was published on IIS in a folder called "angularcore",
 and shows how to use url rewriting with AngularJS on refreshing pages.
-Login is hard coded:
-username: a
-password: b
+<br> Login is hard coded:
+<br> username: a
+<br> password: b
 
 IIS needs:
-DotNetCore.2.0.3-WindowsHosting per IIS e Kestrel.exe
-and this patch for Windows 7, Server 2008 etc etc: Windows6.1-KB2533623-x64.msu
+<br> DotNetCore.2.0.3-WindowsHosting per IIS e Kestrel.exe
+<br> and this patch for Windows 7, Server 2008 etc etc: Windows6.1-KB2533623-x64.msu
 
 
 1.
