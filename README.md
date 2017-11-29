@@ -5,7 +5,7 @@ Simple Project to Demonstrate Url Rewriting for AngularJS on Asp Net Core 2
 Take a look at:
 <br> **ViewsRedirectRule.cs**
 <br> **startup.cs**
-<br> **pp.js**
+<br> **app.js**
 <br> and change accordingly to the publish folder.
 
 This project was published on IIS in a folder called "angularcore",
