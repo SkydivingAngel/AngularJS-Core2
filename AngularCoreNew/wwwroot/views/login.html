@@ -1,0 +1,52 @@
+﻿<div class="container-fluid">
+    <form name="loginForm" novalidate id="loginForm" class="form-signin" ng-submit="login(user)">
+        <img src="content/images/login.png" class="img-responsive center-block login-img-margin" />
+        <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input id="Username" autocomplete="off" class="form-control login-input validation" name="Username" placeholder="Username" required="required" tabindex="1" type="text" ng-model="user.username" autofocus />
+        </div>
+        <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input id="Password" autocomplete="off" class="form-control login-input validation" name="Password" placeholder="Password" required="required" tabindex="2" type="{{passwordInputType}}" ng-model="user.password" /><span class="input-group-addon handcursor"><i class="glyphicon {{customGlyphicon}}" ng-click="showHidePassword()"></i></span>
+        </div>
+        <button type="submit" class="btn btn-md btn-default btn-block shadow" tabindex="3" ng-disabled="loginForm.$invalid">
+            &nbsp;&nbsp;<span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;Login
+        </button><img id="ladingGif" ng-show="isLoading()" src="content/images/progressring.gif" class="img-responsive center-block loader-img-margin main-hidden" />
+    </form>
+    <div id="login-warning" class="warning-alert" ng-show="isLoginError()">
+        <div class="alert alert-danger text-center" role="alert">
+            <strong>Accesso NON Riuscito!</strong>
+        </div>
+    </div>
+</div>
+
+
+<!--<div id="todoPanel" class="panel" ng-controller="defaultCtrl">
+    <form name="myForm" novalidate ng-submit="addUser(newUser)">
+        <div class="well">
+            <div class="form-group">
+                <label>Name:</label>
+                <input name="userName" type="text" class="form-control" required ng-model="newUser.name">
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input name="userEmail" type="email" class="form-control" required ng-model="newUser.email">
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input name="agreed" type="checkbox" ng-model="newUser.agreed" required>
+                    I agree to the terms and conditions
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" ng-disabled="myForm.$invalid">
+                OK
+            </button>
+        </div>
+        <div class="well">
+            Message: {{message}}
+            <div>
+                Valid: {{myForm.$valid}}
+            </div>
+        </div>
+    </form>
+</div>-->

@@ -1,0 +1,298 @@
+﻿body {
+    /*padding-top: 20px;*/
+    padding-bottom: 0px;
+    /*background-color: #eee;*/
+    background-color: #ffffff;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url("../fonts/LatoLatin-Light.eot"); /* IE9 Compat Modes */
+    src: url("../fonts/LatoLatin-Light.woff2") format('woff2'), /* Modern Browsers */
+    url("../fonts/LatoLatin-Light.woff") format('woff'), /* Modern Browsers */
+    url("../fonts/LatoLatin-Light.ttf") format('opentype');
+}
+
+@font-face {
+    font-family: 'Open Sans aa';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(http://fonts.gstatic.com/s/opensans/v13/MTP_ySUJH_bn48VBG8sNShampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Open Sans Italic'), local('OpenSans-Italic'), url(http://fonts.gstatic.com/s/opensans/v13/xjAJXh38I15wypJXxuGMBogp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 600;
+    src: local('Open Sans Semibold Italic'), local('OpenSans-SemiboldItalic'), url(http://fonts.gstatic.com/s/opensans/v13/PRmiXeptR36kaC0GEAetxsiAiQ_a33snTsJhwZvMEaI.woff2) format('woff2');
+}
+
+/*https://stackoverflow.com/questions/32158841/how-to-set-font-family-as-opensans-semibolditalic-font*/
+
+.login-font
+{
+    font-family: 'Lato';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: normal;
+    text-shadow: 4px 4px 4px #aaa;
+    display: inline;
+}
+
+.nav-menu-font {
+    font-family: 'Lato';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    /*text-shadow: 4px 4px 4px #aaa;*/
+    display: inline;
+}
+
+.main-hidden {
+    display: none;
+}
+
+.handcursor {
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.login-img-margin {
+    margin-bottom: 20px;
+}
+
+.loader-img-margin {
+    margin-top: 10px;
+}
+
+.form-signin {
+    max-width: 250px;
+    padding: 15px;
+    margin: 0 auto;
+    /*background-color: #333;*/
+}
+
+.warning-alert {
+    /*max-width: 400px;*/
+    width: 220px;
+    margin: auto;
+    display: table;
+}
+
+.shadow {
+    box-shadow: 2px 2px 2px grey;
+}
+
+/*.login-input {
+    text-transform: lowercase;
+}*/
+
+.margin-view-title {
+    margin-top: 2px;
+    text-align: center;
+}
+
+.well-mine {
+    margin: 20px 4px 20px 4px;
+    padding: 4px 4px 4px 4px;
+}
+
+.input-search {
+    width: 200px;
+}
+
+
+
+
+/*ng-view animations*/
+
+.ngFade.ng-enter {
+    transition: 0.8s linear all;
+    opacity: 0;
+}
+
+.ngFade.ng-enter-active {
+    opacity: 1;
+}
+
+.rotate {
+    -webkit-animation-duration: 0.5s;
+}
+
+.ng-leave.rotate {
+    -webkit-animation-name: rotate-leave;
+}
+
+.ng-enter.rotate {
+    -webkit-animation-name: rotate-enter;
+}
+
+@-webkit-keyframes rotate-leave {
+    0% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: rotate(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: rotate(-180deg);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes rotate-enter {
+    0% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: rotate(-180deg);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform-origin: center center;
+        -webkit-transform: rotate(-360deg);
+        opacity: 1;
+    }
+}
+
+
+.slideup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+}
+
+    .slideup.ng-enter,
+    .slideup.ng-leave {
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+
+    .slideup.ng-enter {
+        top: 100%;
+    }
+
+    .slideup.ng-enter-active {
+        top: 0;
+    }
+
+    .slideup.ng-leave {
+        top: 0;
+    }
+
+    .slideup.ng-leave-active {
+        top: -100%;
+    }
+
+.pop {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+    .pop.ng-enter,
+    .pop.ng-leave {
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+
+    .pop.ng-enter {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    .pop.ng-enter-active,
+    .pop.ng-leave,
+    .pop.ng-leave-active {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    .pop.ng-leave-active {
+    }
+
+.slide-pop {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+    .slide-pop.ng-enter,
+    .slide-pop.ng-leave {
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+
+    .slide-pop.ng-enter {
+        opacity: 0;
+        -webkit-transform: scale(.5);
+        transform: scale(.5);
+    }
+
+    .slide-pop.ng-enter-active {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    .slide-pop.ng-leave {
+        left: 0;
+        opacity: .5;
+    }
+
+    .slide-pop.ng-leave-active {
+        left: -100%;
+        opacity: 0;
+    }
+
+.reverse .page.slide-pop.ng-enter {
+    opacity: .5;
+    left: -100%;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.reverse .page.slide-pop.ng-enter-active {
+    opacity: 1;
+    left: 0;
+}
+
+.reverse .page.slide-pop.ng-leave {
+    opacity: .5;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    left: 0;
+    right: 0;
+}
+
+.reverse .page.slide-pop.ng-leave-active {
+    opacity: 0;
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+}
+
+/*ng-view animations*/

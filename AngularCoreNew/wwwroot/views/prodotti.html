@@ -1,0 +1,32 @@
+<h2 class="margin-view-title">Products</h2>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-lg-12 margin-view-title center-block">
+        <button class="btn btn-primary btn-md btn-lg" ng-click="scaricaProdotti()">
+            <span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Load
+        </button>
+        <img ng-show="isLoading()" src="Content/images/progressring.gif" />&nbsp;&nbsp;
+        <button class="btn btn-primary btn-md btn-lg" ng-click="clearProdotti()" ng-disabled="disableAdd()">
+            <span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Clear
+        </button>
+    </div>
+</div><br />
+<div class="row" ng-hide="disableAdd()">
+    <div class="col-xs-12 col-sm-12 col-lg-12 center-block">
+        <input class="form-control input-md input-lg input-search center-block" placeholder="Filter" ng-model="searchText" ng-hide="disableAdd()" /><br />
+    </div>
+</div>
+<div class="margin-view">
+    <!--<div class="col-sm-4" ng-repeat="accertamento in accertamenti | filter:searchText">
+        <h2><b>Accertamento:</b> {{accertamento.accIds}}</h2>-->
+    <!--<h4>Data Infrazione: {{accertamento.accInfDat | convertDateTime}}</h4>-->
+    <!--<h4>Data Infrazione: {{accertamento.accInfDat}}</h4>
+        <h4>Targa: {{accertamento.accVeiTar | uppercase}}</h4>
+    </div>-->
+
+    <div class="well well-mine" ng-repeat="prodotto in prodotti | filter:searchText">
+        <div><h3><b>{{prodotto.nome}}</b></h3></div>
+        <div><h4><b>{{prodotto.descrizione}}</b></h4></div>
+        <div><h4><b>{{prodotto.quantita | uppercase}} | {{prodotto.prezzo}}</b> &euro;</h4></div>
+</div>
+
+</div>

@@ -1,0 +1,90 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>AngularJsCore</RootNamespace>
+    <AssemblyName>angularjscore</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Persistence\**" />
+    <Compile Remove="wwwroot\content\bootstrap-3.3.7-dist\**" />
+    <Compile Remove="wwwroot\content\css\bootstrap.3.0.0\**" />
+    <Compile Remove="wwwroot\content\scripts\bootstrap.3.0.0\**" />
+    <Compile Remove="wwwroot\content\scripts\jQuery.1.10.2\**" />
+    <Compile Remove="wwwroot\home\**" />
+    <Compile Remove="wwwroot\login\**" />
+    <Compile Remove="wwwroot\Old\**" />
+    <Compile Remove="wwwroot\scripts\**" />
+    <Content Remove="Persistence\**" />
+    <Content Remove="wwwroot\content\bootstrap-3.3.7-dist\**" />
+    <Content Remove="wwwroot\content\css\bootstrap.3.0.0\**" />
+    <Content Remove="wwwroot\content\scripts\bootstrap.3.0.0\**" />
+    <Content Remove="wwwroot\content\scripts\jQuery.1.10.2\**" />
+    <Content Remove="wwwroot\home\**" />
+    <Content Remove="wwwroot\login\**" />
+    <Content Remove="wwwroot\Old\**" />
+    <Content Remove="wwwroot\scripts\**" />
+    <EmbeddedResource Remove="Persistence\**" />
+    <EmbeddedResource Remove="wwwroot\content\bootstrap-3.3.7-dist\**" />
+    <EmbeddedResource Remove="wwwroot\content\css\bootstrap.3.0.0\**" />
+    <EmbeddedResource Remove="wwwroot\content\scripts\bootstrap.3.0.0\**" />
+    <EmbeddedResource Remove="wwwroot\content\scripts\jQuery.1.10.2\**" />
+    <EmbeddedResource Remove="wwwroot\home\**" />
+    <EmbeddedResource Remove="wwwroot\login\**" />
+    <EmbeddedResource Remove="wwwroot\Old\**" />
+    <EmbeddedResource Remove="wwwroot\scripts\**" />
+    <None Remove="Persistence\**" />
+    <None Remove="wwwroot\content\bootstrap-3.3.7-dist\**" />
+    <None Remove="wwwroot\content\css\bootstrap.3.0.0\**" />
+    <None Remove="wwwroot\content\scripts\bootstrap.3.0.0\**" />
+    <None Remove="wwwroot\content\scripts\jQuery.1.10.2\**" />
+    <None Remove="wwwroot\home\**" />
+    <None Remove="wwwroot\login\**" />
+    <None Remove="wwwroot\Old\**" />
+    <None Remove="wwwroot\scripts\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\%2a%2a" />
+    <Content Remove="wwwroot\app\core.js" />
+    <Content Remove="wwwroot\app\main.js" />
+    <Content Remove="wwwroot\app\maintenance.js" />
+    <Content Remove="wwwroot\content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Remove="wwwroot\content\images\officer - Copia.png" />
+    <Content Remove="wwwroot\wwwroot before controller as.rar" />
+    <Content Remove="wwwroot\wwwroot old.rar" />
+    <Content Remove="wwwroot\wwwroot.rar" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AngularJS.Intellisense" Version="1.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\content\images\home.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\css\Styles.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\views\home.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\views\prodotti.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
