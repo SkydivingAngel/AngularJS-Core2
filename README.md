@@ -25,6 +25,7 @@ In order to test on your pc change File hosts in "C:\Windows\System32\drivers\et
 
 Change in "Index.html" according to your publish folder
 <base href="/angularcore/">
+
 2)
 Change in appsettings.json according to your web site address 8needed for page refresh):
   "WebSiteAddress": {
