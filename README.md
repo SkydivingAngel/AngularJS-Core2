@@ -3,40 +3,41 @@
 Simple Project to Demonstrate Url Rewriting for AngularJS on Asp Net Core 2
 
 Take a look at:
-ViewsRedirectRule.cs
-startup.cs
-app.js
-and change accordingly to the publish folder.
+<br> **ViewsRedirectRule.cs**
+<br> **startup.cs**
+<br> **app.js**
+<br> and change accordingly to the publish folder.
 
 This project was published on IIS in a folder called "angularcore",
 and shows how to use url rewriting with AngularJS on refreshing pages.
-Login is hard coded:
-username: a
-password: b
+<br> **Login** is hard coded:
+<br> **username: a**
+<br> **password: b**
 
 IIS needs:
-DotNetCore.2.0.3-WindowsHosting per IIS e Kestrel.exe
-and this patch for Windows 7, Server 2008 etc etc: Windows6.1-KB2533623-x64.msu
+<br> DotNetCore.2.0.3-WindowsHosting per IIS e Kestrel.exe
+<br> and this patch for Windows 7, Server 2008 etc etc: Windows6.1-KB2533623-x64.msu
 
 
-1)
-In order to test on your pc change File hosts in "C:\Windows\System32\drivers\etc"
-192.168.X.X www.netcoreangularjs.com
+1.
+In order to test on your pc change **File hosts** in "C:\Windows\System32\drivers\etc"
+<br>192.168.X.X www.netcoreangularjs.com
 
-Change in "Index.html" according to your publish folder
-<base href="/angularcore/">
-2)
-Change in appsettings.json according to your web site address 8needed for page refresh):
+2.
+Change in **"base href"** in **"Index.html"** according to your publish folder
+<br> Mine is: href="/angularcore/"<br>
+Change in **appsettings.json** according to your web site address (needed for page refresh):
   "WebSiteAddress": {
     "DEFAULT": "www.netcoreangularjs.com"
   }
   
-3)
-Change in "ViewsRedirectRule.cs" according to your publish folder:
+3.
+Change in **"ViewsRedirectRule.cs"** according to your publish folder:
+**SiteAddress is what you wrote in appjson.config**
 
 if (matchPaths.Contains(request.Path.Value))
 {
-	string newLocation = "http://" + SiteAddress + "/angularcore/#" + request.Path;
+	**string newLocation = "http://" + SiteAddress + "/angularcore/#" + request.Path;**
 
 	var response = context.HttpContext.Response;
 	response.StatusCode = StatusCodes.Status302Found;
@@ -44,19 +45,21 @@ if (matchPaths.Contains(request.Path.Value))
 	response.Headers[HeaderNames.Location] = newLocation;
 }
 
-4)
-Change in "startup.cs" for url rewriting (add route, change name etc etc):
+4)ì.
+Change in **"startup.cs"** for url rewriting (add route, change name etc etc):
+**newPath: "/"** is not used but is required.
 
 var options = new RewriteOptions()
 	.Add(new ViewsRedirectRule(
-		matchPaths: new[] { "/login", "/home", "/prodotti" },
+		**matchPaths: new[] { "/login", "/home", "/prodotti" }**,
 		newPath: "/"));
 		
-5)
-Change in "app.js" according to your publish folder:
+5.
+Change in **"app.js"** according to your publish folder:
+Change in **templateUrl** according to your publish folder:
 
-var configFunction = function ($routeProvider, $httpProvider, $locationProvider) {
-
+var configFunction = function ($routeProvider, $httpProvider, $locationProvider)
+{
     $routeProvider.caseInsensitiveMatch = true;
 
     $routeProvider
@@ -86,6 +89,3 @@ var configFunction = function ($routeProvider, $httpProvider, $locationProvider)
     $locationProvider.html5Mode(true);
     $locationProvider.hashPrefix('');
 }
-
-
-
