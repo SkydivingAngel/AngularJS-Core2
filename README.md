@@ -47,6 +47,7 @@ if (matchPaths.Contains(request.Path.Value))
 
 4)ì.
 Change in **"startup.cs"** for url rewriting (add route, change name etc etc):
+**newPath: "/"** is not used but is required.
 
 var options = new RewriteOptions()
 	.Add(new ViewsRedirectRule(
