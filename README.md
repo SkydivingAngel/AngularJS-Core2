@@ -24,7 +24,7 @@ In order to test on your pc change File hosts in "C:\Windows\System32\drivers\et
 <br>192.168.X.X www.netcoreangularjs.com
 
 Change in "base href " in "Index.html" according to your publish folder
-<br> Mine is: href="/angularcore/"
+<br> Mine is: href="/angularcore/"<br>
 2.
 Change in appsettings.json according to your web site address 8needed for page refresh):
   "WebSiteAddress": {
