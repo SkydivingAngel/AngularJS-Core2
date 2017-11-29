@@ -23,8 +23,7 @@ and this patch for Windows 7, Server 2008 etc etc: Windows6.1-KB2533623-x64.msu
 In order to test on your pc change File hosts in "C:\Windows\System32\drivers\etc"
 192.168.X.X www.netcoreangularjs.com
 
-Change in "Index.html" according to your publish folder
-<base href="/angularcore/">
+Change in "base href " in "Index.html" according to your publish folder
 
 2.
 Change in appsettings.json according to your web site address 8needed for page refresh):
